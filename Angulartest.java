@@ -11,7 +11,7 @@ public class Angulartest {
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\Fenil Shah\\Downloads\\chromedriver.exe");
 		ChromeDriver wd = new ChromeDriver();
 		
-		wd.get("http://jsfiddle.net/Fenil96/3451k6o2/9/");
+		wd.get("http://jsfiddle.net/Fenil96/3451k6o2/30/");
 		wd.manage().window().maximize();
 		wd.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 		
@@ -34,6 +34,7 @@ public class Angulartest {
 		
 		//Testcase 2
 		//This checks whether all data is brought to initial state.
+		//The highlighted row stays even though reset button is clicked. It is only removed when the page reloads.
 		wd.findElementById("reset").click();
 		assert(record.isDisplayed());
 		
