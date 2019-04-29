@@ -16,6 +16,7 @@ public class Angulartest {
 		wd.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
 		
 		//TestCase1
+		//This test case checks for invalid input.
 		wd.findElementById("keyword").sendKeys("ffghghgghghghg");
 		wd.findElementById("search").click();
 		WebElement norecord = wd.findElementByXPath("/html/body/div/div[2]");
@@ -32,6 +33,7 @@ public class Angulartest {
 		
 		
 		//Testcase 2
+		//This checks whether all data is brought to initial state.
 		wd.findElementById("reset").click();
 		assert(record.isDisplayed());
 		
